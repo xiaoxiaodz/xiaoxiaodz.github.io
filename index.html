@@ -8,21 +8,160 @@ title: 欢迎来到我的网站
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ page.title }}</title>
+    <title>{{ page.title }} - {{ site.title }}</title>
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-    <header>
-        <h1>{{ site.title }}</h1>
-    </header>
+    <nav>
+        <div class="container">
+            <div class="logo">✨ MySite</div>
+            <ul class="nav-links">
+                <li><a href="#home">首页</a></li>
+                <li><a href="#features">特色</a></li>
+                <li><a href="#comments">评论</a></li>
+                <li><a href="#contact">联系我</a></li>
+            </ul>
+        </div>
+    </nav>
 
-    <main>
-        <h2>{{ page.title }}</h2>
-        <p>欢迎访问我的个人网站！这是一个使用 Jekyll 构建的静态网站。</p>
-        <p>你可以开始在这里添加你的内容了。</p>
-    </main>
+    <section id="home" class="hero">
+        <div class="particles" id="particles"></div>
+        <h1>欢迎来到我的空间</h1>
+        <p>探索无限可能，分享你的想法，让我们一起创造精彩！</p>
+        <div class="cta-buttons">
+            <a href="#contact" class="btn btn-primary">立即留言</a>
+            <a href="#comments" class="btn btn-secondary">查看评论</a>
+        </div>
+    </section>
+
+    <section id="features" class="features">
+        <div class="container">
+            <h2 class="section-title">🌟 网站特色</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">💬</div>
+                    <h3>实时互动</h3>
+                    <p>随时与我交流，分享你的想法和建议。你的每一条留言都是宝贵的财富！</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🎨</div>
+                    <h3>精美设计</h3>
+                    <p>采用现代渐变色彩和流畅动画，打造视觉盛宴，让浏览体验更加愉悦。</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📱</div>
+                    <h3>响应式布局</h3>
+                    <p>完美适配各种设备，无论你使用手机、平板还是电脑，都能获得最佳体验。</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">⚡</div>
+                    <h3>快速加载</h3>
+                    <p>优化的代码结构，确保网站快速响应，让你畅快浏览无等待。</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🔒</div>
+                    <h3>安全可靠</h3>
+                    <p>采用最新安全技术，保护你的数据安全和隐私。</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🌍</div>
+                    <h3>全球访问</h3>
+                    <p>无论你身处何地，都能轻松访问这个网站，与世界各地的朋友交流。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="comments" class="comments">
+        <div class="container">
+            <h2 class="section-title">💬 最新评论</h2>
+            <div class="comments-list">
+                <div class="comment-card">
+                    <div class="comment-header">
+                        <div class="avatar">L</div>
+                        <div class="comment-info">
+                            <h4>李明</h4>
+                            <span>2024年1月15日</span>
+                        </div>
+                    </div>
+                    <div class="comment-content">
+                        网站设计得太棒了！特别喜欢这个渐变效果和浮动粒子动画，看起来非常专业！
+                    </div>
+                </div>
+                <div class="comment-card">
+                    <div class="comment-header">
+                        <div class="avatar">W</div>
+                        <div class="comment-info">
+                            <h4>王芳</h4>
+                            <span>2024年1月14日</span>
+                        </div>
+                    </div>
+                    <div class="comment-content">
+                        界面很炫酷，交互体验也很好。希望能看到更多有趣的内容！
+                    </div>
+                </div>
+                <div class="comment-card">
+                    <div class="comment-header">
+                        <div class="avatar">Z</div>
+                        <div class="comment-info">
+                            <h4>张伟</h4>
+                            <span>2024年1月13日</span>
+                        </div>
+                    </div>
+                    <div class="comment-content">
+                        非常喜欢这个网站的配色方案，科技感十足！期待更多更新！
+                    </div>
+                </div>
+                <div class="comment-card">
+                    <div class="comment-header">
+                        <div class="avatar">S</div>
+                        <div class="comment-info">
+                            <h4>陈思</h4>
+                            <span>2024年1月12日</span>
+                        </div>
+                    </div>
+                    <div class="comment-content">
+                        导航栏的毛玻璃效果很赞，整体设计风格统一，用户体验很好！
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">📮 给我留言</h2>
+            <div class="contact-container">
+                <form class="contact-form" id="contact-form">
+                    <div class="form-group">
+                        <label for="name">你的名字</label>
+                        <input type="text" id="name" name="name" placeholder="请输入你的名字" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">电子邮箱</label>
+                        <input type="email" id="email" name="email" placeholder="请输入你的邮箱" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">留言内容</label>
+                        <textarea id="message" name="message" placeholder="请输入你想说的话..." required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary" style="width: 100%;">发送留言</button>
+                </form>
+            </div>
+        </div>
+    </section>
 
     <footer>
-        <p>&copy; {{ site.time | date: '%Y' }} {{ site.author }}</p>
+        <div class="social-links">
+            <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        </div>
+        <p>&copy; {{ site.time | date: '%Y' }} {{ site.title }}. All rights reserved.</p>
     </footer>
+
+    <script src="/assets/js/script.js"></script>
 </body>
 </html>
