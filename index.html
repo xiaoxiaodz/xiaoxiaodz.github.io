@@ -1,0 +1,28 @@
+---
+layout: default
+title: 欢迎来到我的网站
+---
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ page.title }}</title>
+</head>
+<body>
+    <header>
+        <h1>{{ site.title }}</h1>
+    </header>
+
+    <main>
+        <h2>{{ page.title }}</h2>
+        <p>欢迎访问我的个人网站！这是一个使用 Jekyll 构建的静态网站。</p>
+        <p>你可以开始在这里添加你的内容了。</p>
+    </main>
+
+    <footer>
+        <p>&copy; {{ site.time | date: '%Y' }} {{ site.author }}</p>
+    </footer>
+</body>
+</html>

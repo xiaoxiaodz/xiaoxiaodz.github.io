@@ -1,0 +1,16 @@
+title: 我的个人网站
+author: 你的名字
+email: your-email@example.com
+description: >-
+  这是我的个人网站
+
+baseurl: ""
+url: "https://xiaoxiaodz.github.io"
+
+github:
+  repo: ""
+
+markdown: kramdown
+theme: minima
+plugins:
+  - jekyll-feed
